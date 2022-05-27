@@ -19,13 +19,21 @@
 <body>
     <h1>PHP連線資料庫</h1>
     <?php
-    $dsn = "mysql:host=localhost; charset=utf8; dbname=school2";
-    $pdo = new PDO($dsn, 'root', '');
+    // $dsn = "mysql:host=localhost; charset=utf8; dbname=school2";
+    // $pdo = new PDO($dsn, 'root', '');
+
+    $conn = mysqli_connect('localhost', 'root', '', 'school2');
     $sql = "SELECT `students`.*, `dept`.`code`, `dept`.`name` as '科系' FROM `students`,`dept` WHERE `dept`.`id`=`students`.`dept`";
-$rows= $pdo->query($sql)->fetchAll(PDO::FETCH_BOTH);
-echo "<pre>";
-print_r($rows);
-echo "</pre>";
+    
+    // $rows = $pdo->query($sql)->fetchAll(PDO::FETCH_BOTH);
+    $query = mysqli_query($conn, $sql);
+    
+    echo var_dump($query);
+    // var_dump()傾印
+
+    // echo "<pre>";
+    // print_r($rows);
+    // echo "</pre>";
     ?>
 </body>
 
