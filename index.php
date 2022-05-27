@@ -21,8 +21,8 @@
     <?php
     $dsn = "mysql:host=localhost; charset=utf8; dbname=school2";
     $pdo = new PDO($dsn, 'root', '');
-    $sql = "SELECT * FROM `students`,`dept` WHERE `dept`.`id`=`students`.`dept`";
-$rows= $pdo->query($sql)->fetchAll(PDO::FETCH_COLUMN);
+    $sql = "SELECT `students`.*, `dept`.`code`, `dept`.`name` as '科系' FROM `students`,`dept` WHERE `dept`.`id`=`students`.`dept`";
+$rows= $pdo->query($sql)->fetchAll(PDO::FETCH_BOTH);
 echo "<pre>";
 print_r($rows);
 echo "</pre>";
