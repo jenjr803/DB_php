@@ -23,7 +23,7 @@ $sql= "INSERT INTO `students` (`uni_id`,
                                '{$_POST['major']}',
                                '{$_POST['secondary']}',
                         )"
-        $pdo->query($sql);
+        $pdo-> query($sql);
         // echo $sql;
         header("localhost: index.php");
 ?>
