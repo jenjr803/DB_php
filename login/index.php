@@ -17,6 +17,6 @@ nav{
     <nav>
         <a href="login.php">登入</a>
     </nav>
-    <h1>問卷</h1>
+    <h1 style="text-align: center">問卷</h1>
 </body>
 </html>

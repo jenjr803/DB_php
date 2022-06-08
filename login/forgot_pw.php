@@ -7,6 +7,6 @@
     <title>尋回密碼</title>
 </head>
 <body>
-    
+    <h1>尋回密碼</h1>
 </body>
 </html>
